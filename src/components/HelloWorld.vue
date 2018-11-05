@@ -125,7 +125,7 @@ export default {
             const grossAnnualSalary = value.target.value
             this.createdJobs = Math.round(((globalAmoutCice/(grossAnnualSalary*7)))).toLocaleString()
             this.grossAnnualSalary = (grossAnnualSalary/1).toLocaleString()
-            this.fullPhrase = 'Le pacte CICE pourrait créer ' + this.createdJobs + 'emplois de ' + this.jobType + ' sur la période de 2014 à 2020, à ' + this.grossAnnualSalary + ' brut par an'
+            this.fullPhrase = 'Le pacte CICE pourrait créer ' + this.createdJobs + ' emplois de ' + this.jobType + ' sur la période de 2014 à 2020, à ' + this.grossAnnualSalary + '€ brut par an'
         },
         socialShare: function (name) {
             if (this.fullPhrase.length > 0) {
@@ -137,7 +137,6 @@ export default {
                     window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '', 'width=626,height=436')
                 } else if (name === 'twitter') {
                     text = encodeURIComponent(this.fullPhrase)
-                    console.log(text)
                     window.open('https://twitter.com/share?url=' + url + '&text=' + text, '', 'width=626,height=436')
                 } else if (name === 'linkedin') {
                     text = encodeURIComponent(this.fullPhrase)
